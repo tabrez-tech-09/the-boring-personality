@@ -1,5 +1,3 @@
-import Login from "../pages/Login";
-
 function Navbar() {
   return (
     <nav className="w-full bg-black text-white border-b border-gray-800">

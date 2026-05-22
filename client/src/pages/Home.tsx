@@ -29,7 +29,7 @@ function Home() {
             Explore
           </button>
 
-          <button className="border border-gray-700 px-8 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
+          <button className="bg-[#7C3AED] hover:bg-[#5B21B6] text-white px-6 py-3 rounded-2xl transition duration-300">
             Projects
           </button>
         </div>
