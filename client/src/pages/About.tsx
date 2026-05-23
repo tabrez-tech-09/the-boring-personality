@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 function About() {
@@ -163,6 +164,7 @@ function About() {
 
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
