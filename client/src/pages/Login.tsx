@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function Login() {
@@ -73,9 +74,11 @@ function Login() {
           {/* Signup */}
           <p className="text-center text-gray-400 mt-8">
             Don’t have an account?{" "}
-            <span className="text-white cursor-pointer hover:underline">
-              Sign Up
-            </span>
+           <Link to="/signup">
+              <span className="text-white cursor-pointer hover:underline">
+                Sign Up
+              </span>
+            </Link>
           </p>
         </div>
       </div>
