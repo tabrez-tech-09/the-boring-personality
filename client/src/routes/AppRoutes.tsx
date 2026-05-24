@@ -4,6 +4,7 @@ import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import About from '../pages/About'
 import Categories from '../pages/Categories'
+import GroomingPage from '../categoriesComponents/grooming/Groomingpage'
 
 const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
       <Route path="/categories" element={<Categories />} />
+        <Route path="/grooming" element={<GroomingPage />} />
       <Route path="/about" element={<About />} />
     </Routes>
   )

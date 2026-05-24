@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaBrain,
@@ -15,6 +16,8 @@ import {
 
 function CategoryList() {
 
+  const navigate = useNavigate();
+
   const [showAll, setShowAll] = useState(false);
 
   const categories = [
@@ -23,13 +26,15 @@ function CategoryList() {
       icon: <FaTshirt />,
       desc: "Learn premium styling and attractive outfit combinations.",
       guides: "35+ Guides",
+      path: "/dressing-style",
     },
 
     {
-      title: "Grooming",
+      title: "Grooming & Appearance",
       icon: <FaMagic />,
       desc: "Upgrade hairstyle, skincare, beard, and appearance.",
       guides: "25+ Guides",
+      path: "/grooming",
     },
 
     {
@@ -37,6 +42,7 @@ function CategoryList() {
       icon: <FaDumbbell />,
       desc: "Build an aesthetic body, confidence, and discipline.",
       guides: "40+ Guides",
+      path: "/fitness",
     },
 
     {
@@ -44,6 +50,7 @@ function CategoryList() {
       icon: <FaBullseye />,
       desc: "Remove fear, insecurity, and build real confidence.",
       guides: "30+ Guides",
+      path: "/confidence",
     },
 
     {
@@ -51,6 +58,7 @@ function CategoryList() {
       icon: <FaComments />,
       desc: "Master conversations, speaking, and social impact.",
       guides: "28+ Guides",
+      path: "/communication",
     },
 
     {
@@ -58,6 +66,7 @@ function CategoryList() {
       icon: <FaFire />,
       desc: "Create focus, habits, routines, and success systems.",
       guides: "22+ Guides",
+      path: "/productivity",
     },
 
     {
@@ -65,6 +74,7 @@ function CategoryList() {
       icon: <FaBrain />,
       desc: "Develop emotional control and strong mindset.",
       guides: "26+ Guides",
+      path: "/mindset",
     },
 
     {
@@ -72,6 +82,7 @@ function CategoryList() {
       icon: <FaUsers />,
       desc: "Learn charisma, networking, and attraction psychology.",
       guides: "32+ Guides",
+      path: "/social-skills",
     },
 
     {
@@ -79,6 +90,7 @@ function CategoryList() {
       icon: <FaBriefcase />,
       desc: "Improve resume, interviews, and career confidence.",
       guides: "18+ Guides",
+      path: "/career",
     },
   ];
 
@@ -231,6 +243,7 @@ function CategoryList() {
 
           <div
             key={index}
+            onClick={() => navigate(item.path)}
             className="
               group
               relative
