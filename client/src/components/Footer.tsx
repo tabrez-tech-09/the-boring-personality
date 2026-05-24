@@ -1,4 +1,8 @@
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -6,7 +10,7 @@ function Footer() {
 
       {/* Glow Effect */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#7C3AED] blur-[140px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-125 h-75 bg-[#7C3AED] blur-[140px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-20">
@@ -18,7 +22,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
 
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366f1] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30">
+              <div className="w-11 h-11 rounded-xl bg-linear-to-br from-[#8B5CF6] to-[#6366f1] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30">
                 <span className="text-white font-bold text-lg">
                   T
                 </span>
@@ -33,6 +37,7 @@ function Footer() {
                   The Boring Personality
                 </p>
               </div>
+
             </div>
 
             <p className="text-gray-400 leading-relaxed text-sm">
@@ -40,35 +45,28 @@ function Footer() {
               smooth interactions, and premium frontend design.
             </p>
 
-            {/* Socials */}
+            {/* Social Icons */}
             <div className="flex items-center gap-4 mt-8">
 
               <a
                 href="#"
                 className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
               >
-                <Github size={18} />
+                <FaGithub size={18} />
               </a>
 
               <a
                 href="#"
                 className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
               >
-                <Linkedin size={18} />
+                <FaLinkedin size={18} />
               </a>
 
               <a
                 href="#"
                 className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
               >
-                <Twitter size={18} />
-              </a>
-
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
-              >
-                <Instagram size={18} />
+                <FaInstagram size={18} />
               </a>
 
             </div>
@@ -142,7 +140,7 @@ function Footer() {
                 className="bg-[#111827] border border-[#1f2937] rounded-2xl px-5 py-3 text-white outline-none focus:border-[#7C3AED] transition duration-300"
               />
 
-              <button className="bg-gradient-to-r from-[#8B5CF6] to-[#6366f1] hover:scale-[1.02] text-white py-3 rounded-2xl font-semibold shadow-lg shadow-[#8B5CF6]/20 transition duration-300">
+              <button className="bg-linear-to-r from-[#8B5CF6] to-[#6366f1] hover:scale-[1.02] text-white py-3 rounded-2xl font-semibold shadow-lg shadow-[#8B5CF6]/20 transition duration-300">
                 Subscribe
               </button>
 
@@ -159,6 +157,7 @@ function Footer() {
           </p>
 
           <div className="flex items-center gap-6 text-sm text-gray-500">
+
             <span className="hover:text-white cursor-pointer transition duration-300">
               Privacy Policy
             </span>
@@ -166,6 +165,7 @@ function Footer() {
             <span className="hover:text-white cursor-pointer transition duration-300">
               Terms & Conditions
             </span>
+
           </div>
 
         </div>

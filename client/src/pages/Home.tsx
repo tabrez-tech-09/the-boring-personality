@@ -1,73 +1,67 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Result from "../components/Result";
+import CategoryList from "../components/CategoryList";
+import Hero from "../components/Hero";
 
 function Home() {
+
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-[#070B1A] text-white overflow-hidden">
+
       <Navbar />
-
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-24 flex flex-col items-center text-center">
-        
-        <p className="text-gray-400 uppercase tracking-[0.3em] mb-4 text-sm">
-          Welcome To
-        </p>
+      <Hero />
 
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-          The Boring <br />
-          Personality
-        </h1>
+      {/* TRUST BAR */}
+      <section className="border-y border-[#1f2937] bg-[#0B1120]">
 
-        <p className="max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed mb-10">
-          A modern web experience crafted with React, Vite, Tailwind CSS,
-          and smooth UI interactions. Clean design. Minimal vibes.
-          Powerful frontend.
-        </p>
+        <div className="
+          max-w-7xl
+          mx-auto
+          px-6
+          lg:px-10
+          py-6
+          flex
+          flex-wrap
+          items-center
+          justify-center
+          gap-10
+          text-gray-400
+        ">
 
-        {/* Buttons */}
-        <div className="flex items-center gap-4">
-          <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-300 transition duration-300">
-            Explore
-          </button>
+          <div className="flex items-center gap-3">
+            <span className="text-[#8B5CF6] text-xl">✓</span>
+            <p>Structured Personality Systems</p>
+          </div>
 
-          <button className="bg-[#7C3AED] hover:bg-[#5B21B6] text-white px-6 py-3 rounded-2xl transition duration-300">
-            Projects
-          </button>
+          <div className="flex items-center gap-3">
+            <span className="text-[#8B5CF6] text-xl">✓</span>
+            <p>Confidence Building Frameworks</p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="text-[#8B5CF6] text-xl">✓</span>
+            <p>Real Communication Practice</p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="text-[#8B5CF6] text-xl">✓</span>
+            <p>No Fake Motivation Content</p>
+          </div>
+
         </div>
+
       </section>
 
-      {/* Features Section */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
-        
-        <div className="bg-[#111] p-8 rounded-3xl border border-gray-800 hover:border-gray-600 transition duration-300">
-          <h2 className="text-2xl font-semibold mb-4">
-            Fast
-          </h2>
+      {/* CURRICULUM */}
+      <CategoryList />
 
-          <p className="text-gray-400 leading-relaxed">
-            Built using Vite for lightning-fast performance and smooth developer experience.
-          </p>
-        </div>
+      <Result/>
 
-        <div className="bg-[#111] p-8 rounded-3xl border border-gray-800 hover:border-gray-600 transition duration-300">
-          <h2 className="text-2xl font-semibold mb-4">
-            Modern
-          </h2>
+      <Footer />
 
-          <p className="text-gray-400 leading-relaxed">
-            Clean layouts, responsive design, and beautiful user interfaces with Tailwind CSS.
-          </p>
-        </div>
-
-        <div className="bg-[#111] p-8 rounded-3xl border border-gray-800 hover:border-gray-600 transition duration-300">
-          <h2 className="text-2xl font-semibold mb-4">
-            Creative
-          </h2>
-
-          <p className="text-gray-400 leading-relaxed">
-            Designed to feel minimal yet interactive with smooth transitions and animations.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
