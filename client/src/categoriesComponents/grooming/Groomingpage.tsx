@@ -8,8 +8,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-function GroomingPage() {
 
+function GroomingPage() {
   const navigate = useNavigate();
 
   const groomingCards = [
