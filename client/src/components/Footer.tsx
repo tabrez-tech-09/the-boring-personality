@@ -1,168 +1,344 @@
 import {
-  FaGithub,
-  FaLinkedin,
   FaInstagram,
+  FaLinkedin,
+  FaDiscord,
 } from "react-icons/fa";
 
 function Footer() {
+
   return (
-    <footer className="relative bg-[#070B1A] border-t border-[#111827] overflow-hidden">
 
-      {/* Glow Effect */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-125 h-75 bg-[#7C3AED] blur-[140px]" />
-      </div>
+    <footer className="
+      relative
+      overflow-hidden
+      bg-[#070B1A]
+      border-t
+      border-[#111827]
+    ">
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-20">
+      {/* GLOW */}
+      <div className="
+        absolute
+        top-0
+        left-1/2
+        -translate-x-1/2
+        w-125
+        h-55
+        bg-[#8B5CF6]/10
+        blur-[130px]
+      "></div>
 
-        {/* Top */}
-        <div className="grid md:grid-cols-4 gap-14">
+      <div className="
+        relative
+        max-w-7xl
+        mx-auto
+        px-6
+        lg:px-10
+        pt-16
+        pb-8
+      ">
 
-          {/* Brand */}
+        {/* TOP */}
+        <div className="
+          grid
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-12
+        ">
+
+          {/* BRAND */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
 
-              <div className="w-11 h-11 rounded-xl bg-linear-to-br from-[#8B5CF6] to-[#6366f1] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30">
-                <span className="text-white font-bold text-lg">
+            {/* LOGO */}
+            <div className="
+              flex
+              items-center
+              gap-3
+            ">
+
+              <div className="
+                w-12
+                h-12
+                rounded-2xl
+                bg-linear-to-br
+                from-[#8B5CF6]
+                to-[#6366f1]
+                flex
+                items-center
+                justify-center
+                shadow-lg
+                shadow-[#8B5CF6]/20
+              ">
+
+                <span className="
+                  text-white
+                  font-black
+                  text-lg
+                ">
                   T
                 </span>
+
               </div>
 
               <div>
-                <h1 className="text-2xl font-bold text-white">
+
+                <h1 className="
+                  text-xl
+                  font-black
+                  text-white
+                ">
                   TBP
                 </h1>
 
-                <p className="text-xs tracking-widest uppercase text-gray-400">
+                <p className="
+                  text-[10px]
+                  uppercase
+                  tracking-[3px]
+                  text-gray-400
+                ">
                   The Boring Personality
                 </p>
+
               </div>
 
             </div>
 
-            <p className="text-gray-400 leading-relaxed text-sm">
-              Building futuristic web experiences with modern UI,
-              smooth interactions, and premium frontend design.
+            {/* DESC */}
+            <p className="
+              text-gray-400
+              text-sm
+              leading-relaxed
+              mt-6
+              max-w-sm
+            ">
+
+              Premium self improvement platform
+              helping people improve confidence,
+              mindset, communication, fitness,
+              grooming, and social skills.
+
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-4 mt-8">
+            {/* SOCIAL */}
+            <div className="
+              flex
+              items-center
+              gap-3
+              mt-7
+            ">
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
+                className="
+                  w-11
+                  h-11
+                  rounded-xl
+                  bg-[#111827]
+                  border
+                  border-[#1f2937]
+                  flex
+                  items-center
+                  justify-center
+                  text-gray-400
+                  hover:text-white
+                  hover:border-[#8B5CF6]
+                  transition-all
+                  duration-300
+                "
               >
-                <FaGithub size={18} />
+                <FaInstagram size={17} />
               </a>
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
+                className="
+                  w-11
+                  h-11
+                  rounded-xl
+                  bg-[#111827]
+                  border
+                  border-[#1f2937]
+                  flex
+                  items-center
+                  justify-center
+                  text-gray-400
+                  hover:text-white
+                  hover:border-[#8B5CF6]
+                  transition-all
+                  duration-300
+                "
               >
-                <FaLinkedin size={18} />
+                <FaLinkedin size={17} />
               </a>
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-[#111827] border border-[#1f2937] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#7C3AED] hover:scale-110 transition duration-300"
+                className="
+                  w-11
+                  h-11
+                  rounded-xl
+                  bg-[#111827]
+                  border
+                  border-[#1f2937]
+                  flex
+                  items-center
+                  justify-center
+                  text-gray-400
+                  hover:text-white
+                  hover:border-[#8B5CF6]
+                  transition-all
+                  duration-300
+                "
               >
-                <FaInstagram size={18} />
+                <FaDiscord size={17} />
               </a>
 
             </div>
+
           </div>
 
-          {/* Navigation */}
+          {/* LINKS */}
           <div>
-            <h2 className="text-white font-semibold text-lg mb-6">
-              Navigation
+
+            <h2 className="
+              text-white
+              text-lg
+              font-bold
+              mb-6
+            ">
+              Quick Links
             </h2>
 
-            <ul className="space-y-4 text-gray-400">
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
+            <ul className="
+              space-y-4
+              text-sm
+              text-gray-400
+            ">
+
+              <li className="
+                hover:text-[#A78BFA]
+                cursor-pointer
+                transition
+                duration-300
+              ">
                 Home
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
+              <li className="
+                hover:text-[#A78BFA]
+                cursor-pointer
+                transition
+                duration-300
+              ">
+                About
+              </li>
+
+              <li className="
+                hover:text-[#A78BFA]
+                cursor-pointer
+                transition
+                duration-300
+              ">
                 Categories
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                Blogs
+              <li className="
+                hover:text-[#A78BFA]
+                cursor-pointer
+                transition
+                duration-300
+              ">
+                Contact
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                About
-              </li>
             </ul>
+
           </div>
 
-          {/* Resources */}
+          {/* CATEGORIES */}
           <div>
-            <h2 className="text-white font-semibold text-lg mb-6">
-              Resources
+
+            <h2 className="
+              text-white
+              text-lg
+              font-bold
+              mb-6
+            ">
+              Categories
             </h2>
 
-            <ul className="space-y-4 text-gray-400">
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                Documentation
+            <ul className="
+              space-y-4
+              text-sm
+              text-gray-400
+            ">
+
+              <li className="hover:text-[#A78BFA] transition duration-300 cursor-pointer">
+                Confidence Development
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                UI Components
+              <li className="hover:text-[#A78BFA] transition duration-300 cursor-pointer">
+                Communication Skills
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                Design System
+              <li className="hover:text-[#A78BFA] transition duration-300 cursor-pointer">
+                Dressing Style
               </li>
 
-              <li className="hover:text-[#A78BFA] cursor-pointer transition duration-300">
-                Changelog
+              <li className="hover:text-[#A78BFA] transition duration-300 cursor-pointer">
+                Fitness & Grooming
               </li>
+
             </ul>
-          </div>
 
-          {/* Newsletter */}
-          <div>
-            <h2 className="text-white font-semibold text-lg mb-6">
-              Stay Updated
-            </h2>
-
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Subscribe for latest UI inspirations and frontend updates.
-            </p>
-
-            <div className="flex flex-col gap-4">
-
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-[#111827] border border-[#1f2937] rounded-2xl px-5 py-3 text-white outline-none focus:border-[#7C3AED] transition duration-300"
-              />
-
-              <button className="bg-linear-to-r from-[#8B5CF6] to-[#6366f1] hover:scale-[1.02] text-white py-3 rounded-2xl font-semibold shadow-lg shadow-[#8B5CF6]/20 transition duration-300">
-                Subscribe
-              </button>
-
-            </div>
           </div>
 
         </div>
 
-        {/* Bottom */}
-        <div className="mt-20 pt-8 border-t border-[#111827] flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* BOTTOM */}
+        <div className="
+          mt-14
+          pt-6
+          border-t
+          border-[#111827]
+          flex
+          flex-col
+          md:flex-row
+          items-center
+          justify-between
+          gap-4
+        ">
 
-          <p className="text-gray-500 text-sm">
+          <p className="
+            text-gray-500
+            text-xs
+          ">
             © 2026 The Boring Personality. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6 text-sm text-gray-500">
+          <div className="
+            flex
+            items-center
+            gap-5
+            text-xs
+            text-gray-500
+          ">
 
-            <span className="hover:text-white cursor-pointer transition duration-300">
+            <span className="
+              hover:text-white
+              cursor-pointer
+              transition
+              duration-300
+            ">
               Privacy Policy
             </span>
 
-            <span className="hover:text-white cursor-pointer transition duration-300">
+            <span className="
+              hover:text-white
+              cursor-pointer
+              transition
+              duration-300
+            ">
               Terms & Conditions
             </span>
 
@@ -171,6 +347,7 @@ function Footer() {
         </div>
 
       </div>
+
     </footer>
   );
 }

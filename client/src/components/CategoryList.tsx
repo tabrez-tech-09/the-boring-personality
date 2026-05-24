@@ -3,13 +3,14 @@ import { useState } from "react";
 import {
   FaBrain,
   FaComments,
-  FaEye,
   FaBullseye,
   FaUsers,
   FaBriefcase,
-  FaHeart,
   FaMagic,
   FaArrowRight,
+  FaTshirt,
+  FaDumbbell,
+  FaFire,
 } from "react-icons/fa";
 
 function CategoryList() {
@@ -18,48 +19,66 @@ function CategoryList() {
 
   const categories = [
     {
+      title: "Dressing Style",
+      icon: <FaTshirt />,
+      desc: "Learn premium styling and attractive outfit combinations.",
+      guides: "35+ Guides",
+    },
+
+    {
+      title: "Grooming",
+      icon: <FaMagic />,
+      desc: "Upgrade hairstyle, skincare, beard, and appearance.",
+      guides: "25+ Guides",
+    },
+
+    {
+      title: "Fitness",
+      icon: <FaDumbbell />,
+      desc: "Build an aesthetic body, confidence, and discipline.",
+      guides: "40+ Guides",
+    },
+
+    {
       title: "Confidence Development",
       icon: <FaBullseye />,
+      desc: "Remove fear, insecurity, and build real confidence.",
+      guides: "30+ Guides",
     },
 
     {
       title: "Communication Skills",
       icon: <FaComments />,
-    },
-
-    {
-      title: "Body Language",
-      icon: <FaEye />,
+      desc: "Master conversations, speaking, and social impact.",
+      guides: "28+ Guides",
     },
 
     {
       title: "Success & Productivity",
-      icon: <FaBullseye />,
+      icon: <FaFire />,
+      desc: "Create focus, habits, routines, and success systems.",
+      guides: "22+ Guides",
     },
 
     {
       title: "Mindset & Motivation",
       icon: <FaBrain />,
+      desc: "Develop emotional control and strong mindset.",
+      guides: "26+ Guides",
     },
 
     {
       title: "Social Skills",
       icon: <FaUsers />,
-    },
-
-    {
-      title: "Grooming & Appearance",
-      icon: <FaMagic />,
-    },
-
-    {
-      title: "Emotional Intelligence",
-      icon: <FaHeart />,
+      desc: "Learn charisma, networking, and attraction psychology.",
+      guides: "32+ Guides",
     },
 
     {
       title: "Career & Interview Prep",
       icon: <FaBriefcase />,
+      desc: "Improve resume, interviews, and career confidence.",
+      guides: "18+ Guides",
     },
   ];
 
@@ -73,97 +92,139 @@ function CategoryList() {
       relative
       max-w-7xl
       mx-auto
-      px-6
+      px-4
+      sm:px-6
       lg:px-10
-      py-24
+      py-20
+      overflow-hidden
     ">
 
-      {/* Top */}
+      {/* GLOW */}
       <div className="
+        absolute
+        top-0
+        right-0
+        w-[300px]
+        h-[300px]
+        bg-[#8B5CF6]/10
+        blur-[120px]
+      "></div>
+
+      {/* TOP */}
+      <div className="
+        relative
         flex
         flex-col
         md:flex-row
         md:items-end
         md:justify-between
-        gap-8
-        mb-14
+        gap-6
+        mb-12
       ">
 
         <div>
 
-          <p className="
-            uppercase
-            tracking-[5px]
-            text-[#A78BFA]
-            font-semibold
-            text-sm
+          {/* BADGE */}
+          <div className="
+            inline-flex
+            items-center
+            gap-2
+            px-4
+            py-2
+            rounded-full
+            bg-[#111827]
+            border
+            border-[#1f2937]
+            mb-5
           ">
-            Curriculum
-          </p>
 
+            <div className="
+              w-2
+              h-2
+              rounded-full
+              bg-[#8B5CF6]
+              animate-pulse
+            "></div>
+
+            <p className="
+              text-xs
+              text-gray-300
+            ">
+              Self Improvement Curriculum
+            </p>
+
+          </div>
+
+          {/* TITLE */}
           <h2 className="
-            text-4xl
+            text-3xl
+            sm:text-4xl
             lg:text-5xl
             font-black
-            mt-4
+            leading-tight
           ">
-            Explore Growth Categories
+
+            Upgrade Your
+            <span className="text-[#8B5CF6]">
+              {" "}Personality
+            </span>
+
           </h2>
 
+          {/* DESC */}
           <p className="
             text-gray-400
-            mt-5
+            mt-4
             max-w-2xl
             leading-relaxed
+            text-sm
+            sm:text-base
           ">
 
-            Practical systems to improve confidence,
-            communication, mindset, personality,
-            discipline, and social skills.
+            Practical systems for confidence,
+            communication, fitness, mindset,
+            and social growth.
 
           </p>
 
         </div>
 
-        {/* More Button */}
+        {/* DESKTOP BUTTON */}
         <button
           onClick={() => setShowAll(!showAll)}
           className="
             hidden
             md:flex
             items-center
-            gap-3
-            px-6
+            gap-2
+            px-5
             py-3
-            rounded-2xl
+            rounded-xl
             bg-[#111827]
             border
             border-[#1f2937]
             hover:border-[#8B5CF6]
-            hover:bg-[#151c2d]
-            transition
+            transition-all
             duration-300
             text-sm
-            font-medium
           "
         >
 
-          {showAll ? "Show Less" : "More Categories"}
+          {showAll ? "Show Less" : "Explore More"}
 
-          <FaArrowRight className="
-            text-[#A78BFA]
-          " />
+          <FaArrowRight className="text-[#A78BFA]" />
 
         </button>
 
       </div>
 
-      {/* Cards */}
+      {/* CARDS */}
       <div className="
+        relative
         grid
-        md:grid-cols-2
+        sm:grid-cols-2
         lg:grid-cols-3
-        gap-6
+        gap-5
       ">
 
         {visibleCategories.map((item, index) => (
@@ -174,27 +235,28 @@ function CategoryList() {
               group
               relative
               overflow-hidden
-              bg-[#111827]
+              rounded-[24px]
               border
               border-[#1f2937]
-              rounded-[28px]
-              p-6
+              bg-[#111827]
+              p-5
               hover:-translate-y-2
               hover:border-[#8B5CF6]/40
               hover:shadow-xl
               hover:shadow-[#8B5CF6]/10
               transition-all
               duration-500
+              cursor-pointer
             "
           >
 
-            {/* Glow */}
+            {/* GLOW */}
             <div className="
               absolute
               top-0
               right-0
-              w-32
-              h-32
+              w-28
+              h-28
               bg-[#8B5CF6]/10
               blur-3xl
               rounded-full
@@ -206,11 +268,11 @@ function CategoryList() {
 
             <div className="relative z-10">
 
-              {/* Icon */}
+              {/* ICON */}
               <div className="
-                w-14
-                h-14
-                rounded-2xl
+                w-12
+                h-12
+                rounded-xl
                 bg-[#8B5CF6]/10
                 border
                 border-[#8B5CF6]/20
@@ -218,7 +280,7 @@ function CategoryList() {
                 items-center
                 justify-center
                 text-[#A78BFA]
-                text-xl
+                text-lg
                 group-hover:scale-110
                 transition
                 duration-300
@@ -228,11 +290,12 @@ function CategoryList() {
 
               </div>
 
-              {/* Title */}
+              {/* TITLE */}
               <h3 className="
-                text-xl
+                text-lg
+                sm:text-xl
                 font-bold
-                mt-6
+                mt-5
                 leading-snug
                 group-hover:text-[#C4B5FD]
                 transition
@@ -240,21 +303,20 @@ function CategoryList() {
                 {item.title}
               </h3>
 
-              {/* Description */}
+              {/* DESC */}
               <p className="
                 text-gray-400
                 text-sm
                 leading-relaxed
-                mt-4
+                mt-3
+                min-h-[65px]
               ">
 
-                Structured personality development
-                systems with practical exercises
-                and actionable strategies.
+                {item.desc}
 
               </p>
 
-              {/* Bottom */}
+              {/* BOTTOM */}
               <div className="
                 flex
                 items-center
@@ -262,22 +324,47 @@ function CategoryList() {
                 mt-6
               ">
 
-                <span className="
-                  text-[#A78BFA]
-                  text-sm
-                  font-medium
-                ">
-                  20+ Guides
-                </span>
+                <div>
 
-                <span className="
-                  text-gray-500
-                  text-sm
-                  group-hover:text-[#8B5CF6]
-                  transition
+                  <p className="
+                    text-[#A78BFA]
+                    text-sm
+                    font-semibold
+                  ">
+                    {item.guides}
+                  </p>
+
+                  <p className="
+                    text-gray-500
+                    text-[11px]
+                    mt-1
+                  ">
+                    Premium Lessons
+                  </p>
+
+                </div>
+
+                {/* ARROW */}
+                <div className="
+                  w-10
+                  h-10
+                  rounded-xl
+                  bg-[#0B1120]
+                  border
+                  border-[#1f2937]
+                  flex
+                  items-center
+                  justify-center
+                  text-[#A78BFA]
+                  group-hover:bg-[#8B5CF6]
+                  group-hover:text-white
+                  transition-all
+                  duration-300
                 ">
-                  Explore →
-                </span>
+
+                  <FaArrowRight size={13} />
+
+                </div>
 
               </div>
 
@@ -289,7 +376,7 @@ function CategoryList() {
 
       </div>
 
-      {/* Mobile Button */}
+      {/* MOBILE BUTTON */}
       <div className="
         flex
         justify-center
@@ -302,20 +389,21 @@ function CategoryList() {
           className="
             flex
             items-center
-            gap-3
-            px-6
+            gap-2
+            px-5
             py-3
-            rounded-2xl
+            rounded-xl
             bg-[#111827]
             border
             border-[#1f2937]
             hover:border-[#8B5CF6]
             transition
             duration-300
+            text-sm
           "
         >
 
-          {showAll ? "Show Less" : "More Categories"}
+          {showAll ? "Show Less" : "Explore More"}
 
           <FaArrowRight className="text-[#A78BFA]" />
 
