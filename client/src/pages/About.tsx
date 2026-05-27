@@ -157,7 +157,7 @@ function About() {
 
               <p className="text-gray-400 mt-5 leading-relaxed">
                 Passionate about building modern interfaces and
-                premium digital products with great user experience.
+                premium digital products with great user experience res.
               </p>
             </div>
           ))}
